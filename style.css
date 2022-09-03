@@ -1,0 +1,60 @@
+*{
+    margin: 0px;
+    
+}
+body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 1.5em;
+    background-image: url("https://get.pxhere.com/photo/beach-landscape-sea-coast-water-nature-sand-ocean-horizon-cloud-sky-sunrise-sunset-bridge-morning-wave-dawn-pier-summer-vacation-travel-dusk-idyllic-evening-reflection-holiday-bay-blue-jetty-leisure-relaxation-wooden-destinations-628740.jpg");
+    background-attachment: fixed;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+header{
+    background-color: #232A34;
+    margin-bottom: 25px;
+    padding: 30px;
+    border-radius: 0px 0px 25px 25px;
+}
+h1{
+    color: #F4F2F3;
+    text-align: justify;
+    margin-right: 50px;
+}
+.container{
+    margin: auto;
+    background-color: #232a34;
+    max-width: 550px;
+    min-width: 150px;
+    color: aliceblue;
+    border-radius: 50px;
+    height: auto;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+.formulario{
+    margin-left: 25px;
+    margin-top:25px;
+    font-size: 0.82em;
+}
+input{
+    max-width: 200px;
+    min-width: 120px;
+    margin: 5px;
+    border-radius: 5px;
+    background-color: #303a48;
+    color: #dad8eea0;
+    font-size: 0.9em;
+}
+button{
+    background-color: #2c3540;
+    border: none;
+    color: #DAD8EE;
+    padding: 20px;
+    text-align: center;
+    margin-left: 125px;
+    margin-top: 15px;
+    font-size: 0.8em;
+    border-radius: 25px;
+}
+

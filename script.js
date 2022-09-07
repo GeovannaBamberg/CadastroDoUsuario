@@ -24,7 +24,7 @@ function formularioHTML() {
     <br>` 
 }
 function cadastrar(){
-    const elementoNome= document.getElementById("nomeUsuario").value
+   /* const elementoNome= document.getElementById("nomeUsuario").value
     const elementoDataNascimento= document.getElementById("dataNascimento").value
     const elementoConfirmEmail= document.getElementById("email").value
     const elementoEmail= document.getElementById("ConfirmEmail").value
@@ -35,5 +35,5 @@ function cadastrar(){
         alert("[ERRO] cadastro incompleto")
     } else {
         alert("tudo certo")
-    }
+    }*/
 }

@@ -21,8 +21,19 @@ function formularioHTML() {
     <br>`
     elementoSection.innerHTML+= `
     <button onclick="cadastrar()">Cadastrar</button>
-    <br>`
+    <br>` 
 }
 function cadastrar(){
-    
+    const elementoNome= document.getElementById("nomeUsuario").value
+    const elementoDataNascimento= document.getElementById("dataNascimento").value
+    const elementoConfirmEmail= document.getElementById("email").value
+    const elementoEmail= document.getElementById("ConfirmEmail").value
+    const elementoSenha= document.getElementById("senha").value
+    const elementoConfirmSenha= document.getElementById("ConfirmSenha").value
+
+    if ((elementoNome||elementoDataNascimento||elementoConfirmEmail||elementoEmail||elementoSenha||elementoConfirmSenha)=="") {
+        alert("[ERRO] cadastro incompleto")
+    } else {
+        alert("tudo certo")
+    }
 }

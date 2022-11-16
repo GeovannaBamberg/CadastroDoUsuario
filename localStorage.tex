@@ -1,0 +1,79 @@
+informações do localStorage:
+
+1° recursos para salvar dados no navegador, que persiste após o recarregamento da página ou ao fechar a aba;
+2° capacidade maxima de 10mb;
+3° os dados são salvos no computador do usuário;
+4° estes dados não possuem tempo de expiração, mas podem ser removidos;
+5° os dados ficam na aba application do dev tools;
+
+informações do sessionStorage:
+
+1° recurso similar ao localStorage;
+2° Capacidade máxima de 5mb;
+3° Os dados são salvos no computador do usuário;
+4° Os dados expiram quando a aba é fechada;
+
+
+1 -INSERINDO DADOS:
+
+localStorage.setItem("name", "matheus")
+
+detalhe: independe do item que estivemos salvando, ele será salvo como string
+
+2- restart sem perder dados
+
+3 - RESGATAR ITEM 
+
+const name = localStorage.getItem("nome");
+alert (nome)
+
+4- resgate de item que não existe
+
+const lastName = localStorage.getItem("lastName")
+
+5- remover item
+localStorage.removeItem("nome")
+
+6- limpar todos itens
+localStorage.clear()
+
+-------------------------
+1 -INSERINDO DADOS:
+sessionStorage.setItem('number',123)
+
+2- reninciar e perder dados: 
+(se atualizar mantem dados, mas se fechar e abrir não mantem )
+
+
+3-remover item:
+sessionStorage.removeItem("number")
+
+4- limpar todos itens: 
+sessionStorage.clear()
+
+5 - RESGATAR ITEM 
+
+const name = localStorage.getItem("nome");
+
+---------------------------------------------------------------
+Convertendo variaveis e objetos em json
+const pessoa1 = {
+    nome: "Geovanna",
+    email:"geovanna.t.bamberg@gmail.com",
+    senha: "Geo@35413590"
+}
+
+localStorage.setItem("persoa1", JSON.stringify(pessoa1))
+
+
+const personObject = json.parse(getPerson)
+
+
+sessionStorage.removeItem("number")
+
+const getPerson = localStorage.getItem("pessoa1")
+
+alert(getPerson)
+
+alert(typeof personObject)
+alert(personObject.job)

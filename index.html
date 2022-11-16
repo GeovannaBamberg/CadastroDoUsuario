@@ -5,18 +5,54 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/CadastroDoUsuario/style.css">
 </head>
 <body>
     <header>
         <h1>Cadastro</h1>
     </header>
     <main class="container">
-        <form  class="formulario">
+      
+        <form  class="formulario" id="formulario">
+           <label>Nome Completo</label>
+            <input type="text" name="nomeCompleto" id="nomeUsuario" maxlength="120" minlength="3" required>
+            <br>
+            <label>Data De Nascimento</label>
+            <input type="date" name="dataNascimento" id="dataNascimento" required>
+            <br>
+            <label>Email</label>
+            <input type="email" name="email " id="email" required>
+            <br>
+            <label>Comprovação de Email</label>
+            <input type="email" name="confirmEmail " id="confirmEmail" required>
+            <br>
+            <label>Senha</label>
+            <input type="password" name="senha" id="senha" required>
+            <br>
+            <label>Comfirmação de Senha</label>
+            <input type="password" name="ConfirmSenha" id="confirmSenha" required minlength="10">
+            <br>
+            <button type="submit">Cadastrar</button>
+            <br>
+        </form>
+      
+        <section id="entrada">
+            <form id="form-projetos" class="formulario" >
+                <h3>Crie um novo projeto</h3>
+                <label>Nome do projeto</label> <br>
+                <input type="text" placeholder="Nome do projeto" id="nomeProjeto" required>
+                <br>
+                <label>Valor</label> <br>
+                <input type="number" placeholder="Valor do projeto" id="valorProjeto" required>
+                <br>
+                <input type="submit" value="Criar">
+            </form>
+        </section>
+        <div id="projetos">
 
-        </form >
+        </div>
     </main>
     <footer></footer>
 </body>
-<script src="script.js"></script>
+<script src="/CadastroDoUsuario/script.js"></script>
 </html>

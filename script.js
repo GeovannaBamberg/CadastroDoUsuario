@@ -1,24 +1,26 @@
 const elementoFormularioCadastro = document.getElementById('formulario')
-const elementoSection=document.getElementById("entrada")
+const elementoSection= document.getElementById("entrada")
 const elementoProjetos = document.getElementById('projetos')
 const projetosCriados = []
+
+const elementoNome= document.getElementById("nomeUsuario").value
+const elementoDataNascimento= document.getElementById("dataNascimento").value
+const elementoConfirmEmail= document.getElementById("email").value
+const elementoEmail= document.getElementById("confirmEmail").value
+const elementoSenha= document.getElementById("senha").value
+const elementoConfirmSenha= document.getElementById("confirmSenha").value
 
 // botao cadastro
 elementoFormularioCadastro.addEventListener("submit", (e)=>{
     e.preventDefault()
-    const elementoNome= document.getElementById("nomeUsuario").value
-    const elementoDataNascimento= document.getElementById("dataNascimento").value
-    const elementoConfirmEmail= document.getElementById("email").value
-    const elementoEmail= document.getElementById("confirmEmail").value
-    const elementoSenha= document.getElementById("senha").value
-    const elementoConfirmSenha= document.getElementById("confirmSenha").value
     
-    if ((elementoNome&&elementoDataNascimento&&elementoConfirmEmail&&elementoEmail&&elementoSenha&&elementoConfirmSenha)==""){
-        alert("[ERRO] cadastro incompleto")
-    } else {
+    if ((elementoSenha===elementoConfirmSenha&&elementoEmail===elementoConfirmEmail)){
         criarPessoa(elementoNome, elementoDataNascimento, elementoConfirmEmail, elementoConfirmSenha, e)
-
+        alert('senha ou emails criando são iguais')
+    } else {
+     alert('senha ou emails não são iguais')
     }
+
 })
 //criando cadastro
 function criarPessoa(elementoNome, elementoDataNascimento, elementoConfirmEmail, elementoConfirmSenha, e) {
@@ -40,9 +42,11 @@ function criarPessoa(elementoNome, elementoDataNascimento, elementoConfirmEmail,
         nomeUser = JSON.parse(localStorage.getItem('usuario')).nome
         elementoFormularioCadastro.style.display ="none";
         elementoSection.style.display = "block";
+
         elementoHeader = document.querySelector('h1')
         elementoHeader.innerText = "Projetos";
-        elementoSection.insertAdjacentHTML("afterbegin", `<h2>Bem vinda  <strong>${nomeUser}</strong> </h2>`) 
+
+        elementoSection.insertAdjacentHTML("afterbegin", `<h2>Bem vinda <strong>${elementoNome}</strong> </h2>`) 
     }else{
         elementoSection.style.display = "none";
     }
